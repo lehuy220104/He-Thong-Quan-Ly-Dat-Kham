@@ -5,7 +5,7 @@ import "./Homefooter.scss";
 class HomeFooter extends Component {
   render() {
     return (
-      <div className="home-footer">
+      <div className="home-footer" style={{backgroundColor:"#BBDCE5"}}>
         <p>
           &copy;
           <FormattedMessage id="homepage.footer-infor" />

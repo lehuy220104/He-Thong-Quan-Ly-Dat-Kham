@@ -15,7 +15,7 @@ let sendSimpleEmail = async (dataSend) => {
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"Lê Văn Hiểu 👻" <levanhieu12112002@gmail.com>', // sender address
+    from: '"Lê Huy 👻" <daithanhmb3@gmail.com>', // sender address
     to: dataSend.receiverEmail, // list of receivers
     subject: "Thông tin đặt lịch khám bệnh", // Subject line
     html: getBodyHTMLEmail(dataSend),
@@ -27,7 +27,7 @@ let getBodyHTMLEmail = (dataSend) => {
   if (dataSend.language === "vi") {
     result = `
 <h3><b>Xin chào ${dataSend.patientName}!</b></h3>
-<p>Bạn nhận được email này vì đã đặt lịch khám bệnh online trên mywebsite</p>
+<p>Bạn nhận được email này vì đã đặt lịch khám bệnh online trên My Health Care</p>
 <p>Thông tin đặt lịch khám bệnh:</p>
 <div><b>Thời gian: ${dataSend.time}</b></div>
 <div><b>Bác sĩ: ${dataSend.doctorName}</b></div>
@@ -41,7 +41,7 @@ let getBodyHTMLEmail = (dataSend) => {
   if (dataSend.language === "en") {
     result = `
     <h3><b>Dear ${dataSend.patientName}!</b></h3>
-    <p>You received this email because you booked an online medical appointment on mywebsite</p>
+    <p>You received this email because you booked an online medical appointment on My Health Care</p>
     <p>Information to schedule an appointment:</p>
     <div><b>Time: ${dataSend.time}</b></div>
     <div><b>Doctor: ${dataSend.doctorName}</b></div>
@@ -60,7 +60,7 @@ let getBodyHTMLEmailRemedy = (dataSend) => {
   if (dataSend.language === "vi") {
     result = `
 <h3><b>Xin chào ${dataSend.patientName}!</b></h3>
-<p>Bạn nhận được email này vì đã đặt lịch khám bệnh online trên mywebsite</p>
+<p>Bạn nhận được email này vì đã đặt lịch khám bệnh online trên My Health Care</p>
 <p>Thông tin đơn thuốc được gửi trong file đính kèm.</p>
 <div>Xin chân thành cảm ơn!</div>
 `;
@@ -68,7 +68,7 @@ let getBodyHTMLEmailRemedy = (dataSend) => {
   if (dataSend.language === "en") {
     result = `
     <h3><b>Dear ${dataSend.patientName}!</b></h3>
-    <p>You received this email because you booked an online medical appointment on mywebsite</p>
+    <p>You received this email because you booked an online medical appointment on My Health Care</p>
     <p>bla bla</p>
     <div>Sincerely thank!</div>
     `;
@@ -90,7 +90,7 @@ let sendAttachment = async (dataSend) => {
 
       // send mail with defined transport object
       let info = await transporter.sendMail({
-        from: '"Lê Văn Hiểu 👻" <levanhieu12112002@gmail.com>', // sender address
+        from: '"Lê Huy👻" <daithanhmb3@gmail.com>', // sender address
         to: dataSend.email, // list of receivers
         subject: "Thông tin đặt lịch khám bệnh", // Subject line
         html: getBodyHTMLEmailRemedy(dataSend),
@@ -127,7 +127,7 @@ let sendForgotPasswordEmail = async (dataSend) => {
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"Huỳnh Minh Đức 👻" <duchmdev@gmail.com>', // sender address
+    from: 'Lê Huy" <daithanhmb3@gmail.com>', // sender address
     to: dataSend.receiverEmail, // list of receivers
     subject: "Thông tin lấy lại mật khẩu", // Subject line
     html: getBodyHTMLEmailForgotPassword(dataSend),

@@ -176,7 +176,7 @@ class HomeHeader extends Component {
         {this.props.isShowBanner === true && (
           <div className="home-header-banner">
             <div className="content-up position-relative">
-              <div className="position-absolute banner-content" style={{bottom:"0%",left:"50%",transform:"translateX(-50%)",background:"#F6F9FD"}}>
+              <div className="position-absolute banner-content" style={{bottom:"0%",left:"50%",transform:"translateX(-50%)"}}>
                 <div className="title1">
                   <FormattedMessage id="banner.title1" />
                 </div>
